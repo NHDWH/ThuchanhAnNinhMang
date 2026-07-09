@@ -1,6 +1,6 @@
 # Court Sport - Website Quản Lý Đặt Sân Bóng Đá Và Cầu Lông
 
-## 🏫 Thông Tin Đồ Án
+## Thông Tin Đồ Án
 * **Trường:** Đại học Hùng Vương TP. Hồ Chí Minh[cite: 2]
 * **Khoa:** Kỹ thuật - Công nghệ[cite: 2]
 * **Môn học:** Lập trình Web[cite: 2]
@@ -11,7 +11,7 @@
 
 ---
 
-## 👥 Thành Viên Nhóm & Phân Công Nhiệm Vụ
+## Thành Viên Nhóm & Phân Công Nhiệm Vụ
 
 Hệ thống đánh giá đóng góp công việc nội bộ đạt sự đồng thuận 100% cho tất cả các thành viên[cite: 2]:
 
@@ -25,7 +25,7 @@ Hệ thống đánh giá đóng góp công việc nội bộ đạt sự đồng
 
 ---
 
-## 📝 Giới Thiệu Đề Tài
+## Giới Thiệu Đề Tài
 Hiện nay, phần lớn các cơ sở kinh doanh sân thể thao vẫn áp dụng hình thức quản lý thủ công hoặc qua điện thoại, dẫn đến việc nhầm lẫn lịch, mất thời gian và khó tra cứu thông tin[cite: 2]. Website **Court Sport** ra đời nhằm cung cấp nền tảng trực tuyến giúp người dùng dễ dàng tìm kiếm, đặt sân, thanh toán theo thời gian thực và hỗ trợ các đơn vị quản lý vận hành kinh doanh hiệu quả[cite: 2].
 
 ### Đối Tượng Sử Dụng Hệ Thống
@@ -36,7 +36,7 @@ Hiện nay, phần lớn các cơ sở kinh doanh sân thể thao vẫn áp dụ
 
 ---
 
-## ⚙️ Yêu Cầu Kỹ Thuật (Non-functional Requirements)
+## Yêu Cầu Kỹ Thuật (Non-functional Requirements)
 * **Kiến trúc:** Phát triển theo mô hình chuẩn **MVC** (Model - DAO - Servlet/Controller - JSP View)[cite: 2].
 * **Backend:** Xử lý Request/Response bằng **Java Servlet** kết nối qua **JDBC**[cite: 2].
 * **Frontend:** Giao diện hiển thị động bằng **JSP**, thiết kế responsive thân thiện trên mọi thiết bị[cite: 2].
@@ -44,7 +44,7 @@ Hiện nay, phần lớn các cơ sở kinh doanh sân thể thao vẫn áp dụ
 
 ---
 
-## 🗃️ Kiến Trúc Cơ Sở Dữ Liệu (`BookingFieldDB`)
+## Kiến Trúc Cơ Sở Dữ Liệu (`BookingFieldDB`)
 
 Hệ thống bao gồm **07 bảng dữ liệu** được thiết kế chuẩn hóa chặt chẽ[cite: 2]:
 1. `roles`: Lưu trữ cấu hình vai trò hệ thống (ADMIN, USER...)[cite: 2].
@@ -60,12 +60,12 @@ Sơ đồ quan hệ thực tế giữa các bảng dữ liệu trong hệ thốn
 
 ![Sơ đồ ERD](https://images.squarespace-cdn.com/content/v1/5f3dfd683692df460b642646/1720510191834-8KDR61GNGD55VWS9W6CP/image_71f1c7.jpg)
 
-> **🔒 Quy Tắc Vàng Chống Trùng Lịch (Real-time Validation):**
+> **Quy Tắc Vàng Chống Trùng Lịch (Real-time Validation):**
 > Hệ thống áp dụng ràng buộc duy nhất `CONSTRAINT uq_realtime_booking UNIQUE (field_id, booking_date, slot_id)`[cite: 2]. Ràng buộc này đảm bảo tại một sân, vào một ca giờ của một ngày cụ thể, chỉ chấp nhận duy nhất một đơn đặt thành công[cite: 2].
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy Dự Án
+## Hướng Dẫn Cài Đặt & Chạy Dự Án
 
 ### 1. Khởi tạo Database
 * Mở MySQL Server của bạn (qua XAMPP, MySQL Workbench hoặc DBeaver).

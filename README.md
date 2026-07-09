@@ -58,7 +58,8 @@ Hệ thống bao gồm **07 bảng dữ liệu** được thiết kế chuẩn h
 ### Sơ đồ Thực thể - Liên kết (ERD)
 Sơ đồ quan hệ thực tế giữa các bảng dữ liệu trong hệ thống:
 
-![Sơ đồ ERD](https://images.squarespace-cdn.com/content/v1/5f3dfd683692df460b642646/1720510191834-8KDR61GNGD55VWS9W6CP/image_71f1c7.jpg)
+![Sơ đồ ERD]<img width="952" height="630" alt="anh" src="https://github.com/user-attachments/assets/82e08585-20ca-4041-8080-9004c8060494" />
+
 
 > **Quy Tắc Vàng Chống Trùng Lịch (Real-time Validation):**
 > Hệ thống áp dụng ràng buộc duy nhất `CONSTRAINT uq_realtime_booking UNIQUE (field_id, booking_date, slot_id)`. Ràng buộc này đảm bảo tại một sân, vào một ca giờ của một ngày cụ thể, chỉ chấp nhận duy nhất một đơn đặt thành công.

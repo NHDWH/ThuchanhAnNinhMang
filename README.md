@@ -61,7 +61,7 @@ Sơ đồ quan hệ thực tế giữa các bảng dữ liệu trong hệ thốn
 ![Sơ đồ ERD]<img width="952" height="630" alt="anh" src="https://github.com/user-attachments/assets/82e08585-20ca-4041-8080-9004c8060494" />
 
 
-> **Quy Tắc Vàng Chống Trùng Lịch (Real-time Validation):**
+> **Quy Tắc Vàng (Real-time Validation):**
 > Hệ thống áp dụng ràng buộc duy nhất `CONSTRAINT uq_realtime_booking UNIQUE (field_id, booking_date, slot_id)`. Ràng buộc này đảm bảo tại một sân, vào một ca giờ của một ngày cụ thể, chỉ chấp nhận duy nhất một đơn đặt thành công.
 
 ---

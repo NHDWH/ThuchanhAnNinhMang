@@ -68,83 +68,49 @@ Sơ đồ quan hệ thực tế giữa các bảng dữ liệu trong hệ thốn
 
 ## Hướng Dẫn Cài Đặt & Chạy Dự Án
 
-1. Yêu cầu hệ thống
+## 1. Yêu cầu hệ thống
 Để chạy dự án Website Đặt Sân Thể Thao, máy tính cần cài đặt các phần mềm sau:
-| Phần mềm                   | Phiên bản khuyến nghị                      |
-| -------------------------- | ------------------------------------------ |
-| Hệ điều hành               | Windows 10/11 hoặc Ubuntu                  |
-| Java Development Kit (JDK) | JDK 17 máy đang sài                        |
-| Apache NetBeans            | 17 trở lên                                 |
-| Apache Tomcat              | Tomcat 11.0                                |
-| MySQL Server               | 8.0 trở lên                                |
-| MySQL Workbench            | 8.0 trở lên                                |
-| Web Browser                | Google Chrome, Microsoft Edge hoặc Firefox |
-2. Cài đặt môi trường 
-Bước 1: Cài đặt JDK
-. Tải xuống và cài đặt bộ cài JDK từ trang chủ Oracle
-. Cấu hình biến môi trường hệ thống: Định nghĩa JAVA_HOME trỏ tới thư mục cài đặt JDK và thêm đường dẫn ;%JAVA_HOME%\bin vào biến Path.
-. Kiểm tra tính thông mạch bằng cửa sổ Command Prompt (cmd): java -version (hiển thị phiên bản là đúng).
-Bước 2: Tích hợp Web Server Apache Tomcat vào NetBeans
-. Tải bản phân phối tệp nén .zip của Apache Tomcat về máy và giải nén.
-. Mở giao diện Apache NetBeans, di chuyển đến thanh quản trị: Services → Servers → Add Server
-. Chọn Apache Tomcat
-Bước 3: Khởi tạo Dịch vụ Dữ liệu MySQL
-. Tiến hành cài đặt MySQL Workbench.
-. Thiết lập mật khẩu cho tài khoản quản trị tối cao (root) và đảm bảo tiến trình MySQL Service đang chạy ngầm trên hệ thống.
-3. Khởi tạo Cơ sở dữ liệu vật lý
-Mở công cụ MySQL Workbench, thiết lập kết nối vào Localhost và thực thi tuần tự các bước cấu hình sau:
-Bước 1: Khởi tạo một Schema mới mang tên định danh của dự án:
-. CREATE DATABASE courtsport CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-Bước 2: Ra lệnh chỉ định phân vùng làm việc cho phiên kết nối:
-. USE courtsport;
-Bước 3: Mở và chạy file script cấu trúc database.sql (hoặc courtsport.sql) đi kèm dự án để tự động xây dựng các bảng vật lý và mối quan hệ khóa ngoại:
-. users → roles → fields → categories → bookings → payments → time_slots
-Bước 4: Chạy file script dữ liệu để nạp sẵn danh mục các ca đấu cố định, danh sách sân bóng/sân cầu lông và các tài khoản thử nghiệm hệ thống.
-4. Triển khai và Cấu hình mã nguồn trên IDE
-Bước 1: Mở dự án trong Apache NetBeans
-. Khởi động NetBeans, trên thanh Menu điều hướng chọn: File → Open Project
-. Tìm đến thư mục chứa mã nguồn của đồ án mang tên web_04 và nhấn nút Open Project.
-Bước 2: Định cấu hình kết nối trong tệp DBConnection.java
-. Truy cập theo cấu trúc thư mục package utils, mở tệp tin DBConnection.java ra điều chỉnh thông số định danh truy cập MySQL cho khớp với máy cục bộ:
-. private static final String USERNAME = "tên tài khoản mysql của bạn mặc định là root";
+
+| Phần mềm | Phiên bản khuyến nghị |
+| :--- | :--- |
+| **Hệ điều hành** | Windows 10/11 hoặc Ubuntu |
+| **Java Development Kit (JDK)** | JDK 17 máy đang sài |
+| **Apache NetBeans** | 17 trở lên |
+| **Apache Tomcat** | Tomcat 11.0 |
+| **MySQL Server** | 8.0 trở lên |
+| **MySQL Workbench** | 8.0 trở lên |
+| **Web Browser** | Google Chrome, Microsoft Edge hoặc Firefox |
+
+---
+
+## 2. Cài đặt môi trường 
+
+### Bước 1: Cài đặt JDK
+* Tải xuống và cài đặt bộ cài JDK từ trang chủ Oracle.
+* Cấu hình biến môi trường hệ thống: Định nghĩa `JAVA_HOME` trỏ tới thư mục cài đặt JDK và thêm đường dẫn `;%JAVA_HOME%\bin` vào biến `Path`.
+* Kiểm tra tính thông mạch bằng cửa sổ Command Prompt (cmd): `java -version` (hiển thị phiên bản là đúng).
+
+### Bước 2: Tích hợp Web Server Apache Tomcat vào NetBeans
+* Tải bản phân phối tệp nén `.zip` của Apache Tomcat về máy và giải nén.
+* Mở giao diện Apache NetBeans, di chuyển đến thanh quản trị: **Services** ➡️ **Servers** ➡️ **Add Server**.
+* Chọn **Apache Tomcat**.
+
+### Bước 3: Khởi tạo Dịch vụ Dữ liệu MySQL
+* Tiến hành cài đặt MySQL Workbench.
+* Thiết lập mật khẩu cho tài khoản quản trị tối cao (`root`) và đảm bảo tiến trình **MySQL Service** đang chạy ngầm trên hệ thống.
+
+---
+
+## 3. Khởi tạo Cơ sở dữ liệu vật lý
+Mở công cụ **MySQL Workbench**, thiết lập kết nối vào `Localhost` và thực thi tuần tự các bước cấu hình sau:
+
+* **Bước 1**: Khởi tạo một Schema mới mang tên định danh của dự án:
+  ```sql
+  CREATE DATABASE courtsport CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+Bước 2: Ra lệnh chỉ định phân vùng làm việc cho phiên kết nối:SQLUSE courtsport;
+Bước 3: Mở và chạy file script cấu trúc database.sql (hoặc courtsport.sql) đi kèm dự án để tự động xây dựng các bảng vật lý và mối quan hệ khóa ngoại:users ➡️ roles ➡️ fields ➡️ categories ➡️ bookings ➡️ payments ➡️ time_slotsBước 4: Chạy file script dữ liệu để nạp sẵn danh mục các ca đấu cố định, danh sách sân bóng/sân cầu lông và các tài khoản thử nghiệm hệ thống.4. Triển khai và Cấu hình mã nguồn trên IDEBước 1: Mở dự án trong Apache NetBeansKhởi động NetBeans, trên thanh Menu điều hướng chọn: File ➡️ Open Project.Tìm đến thư mục chứa mã nguồn của đồ án mang tên web_04 và nhấn nút Open Project.Bước 2: Định cấu hình kết nối trong tệp DBConnection.javaTruy cập theo cấu trúc thư mục package utils, mở tệp tin DBConnection.java ra điều chỉnh thông số định danh truy cập MySQL cho khớp với máy cục bộ:Javaprivate static final String USERNAME = "tên tài khoản mysql của bạn mặc định là root";
 private static final String PASSWORD = "mật khẩu sql của bạn";
-Bước 3: Rà soát thư viện kết nối JDBC
-. Chuột phải vào tên dự án → chọn Properties → chọn phân mục Libraries.
-. Đảm bảo tại tab Compile, hệ thống đã nhận diện được file Driver trung gian: máy đang dùng jakarta.servlet.jsp.jstl-3.0.1.jar, jakarta.servlet.jsp.jstl-api-3.0.0.jar và mysql-connector-j-9.6.0.jar. Nếu chưa có, nhấn nút Add JAR/Folder để trỏ file thủ công.
-5. Khởi chạy và Kiểm thử chức năng toàn cục
-A. Kích hoạt Server 
-. Nhấp chuột phải vào tên dự án chọn Clean and Build để dọn dẹp bộ nhớ đệm và biên dịch lại mã nguồn sạch.
-. Nhấn nút Run trên thanh công cụ
-. Hệ thống máy chủ Tomcat sẽ tự động compile các Servlet và mở trình duyệt mặc định truy cập thẳng vào địa chỉ trang chủ:http://localhost:808/web_04
-B. Hệ thống tài khoản mặc định có trong sql 
-Mode: Chủ sân
-| Thuộc tính |       Giá trị      |
-| ---------- | ------------------ |
-| Username   | admin@webcauda.com |
-| Password   |       123456       |
-Mode: Khách
-| Thuộc tính |       Giá trị       |
-| ---------- | ------------------- |
-| Username   | khachhang@gmail.com |
-| Password   |       123456        |
-Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
-. Đăng ký tài khoản.
-. Đăng nhập.
-. Xem danh sách sân.
-. Tìm kiếm sân.
-. Xem chi tiết sân.
-. Đặt sân.
-. Thanh toán (mô phỏng).
-. Xem lịch sử đặt sân.
-. Đăng xuất.
-. Đăng nhập Admin.
-. Quản lý sân.
-. Quản lý người dùng.
-. Quản lý đơn đặt.
-. Xem thống kê.
-6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự án
-. Cấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)
-courtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
+Bước 3: Rà soát thư viện kết nối JDBCChuột phải vào tên dự án ➡️ chọn Properties ➡️ chọn phân mục Libraries.Đảm bảo tại tab Compile, hệ thống đã nhận diện được file Driver trung gian: máy đang dùng jakarta.servlet.jsp.jstl-3.0.1.jar, jakarta.servlet.jsp.jstl-api-3.0.0.jar và mysql-connector-j-9.6.0.jar. Nếu chưa có, nhấn nút Add JAR/Folder để trỏ file thủ công.5. Khởi chạy và Kiểm thử chức năng toàn cụcA. Kích hoạt ServerNhập chuột phải vào tên dự án chọn Clean and Build để dọn dẹp bộ nhớ đệm và biên dịch lại mã nguồn sạch.Nhấn nút Run trên thanh công cụ.Hệ thống máy chủ Tomcat sẽ tự động compile các Servlet và mở trình duyệt mặc định truy cập thẳng vào địa chỉ trang chủ: http://localhost:808/web_04B. Hệ thống tài khoản mặc định có trong sqlMode: Chủ sânThuộc tínhGiá trịUsernameadmin@webcauda.comPassword123456Mode: KháchThuộc tínhGiá trịUsernamekhachhang@gmail.comPassword123456Sau khi chạy thành công, kiểm tra lần lượt các chức năng:Đăng ký tài khoản.Đăng nhập.Xem danh sách sân.Tìm kiếm sân.Xem chi tiết sân.Đặt sân.Thanh toán (mô phỏng).Xem lịch sử đặt sân.Đăng xuất.Đăng nhập Admin.Quản lý sân.Quản lý người dùng.Quản lý đơn đặt.Xem thống kê.6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự ánCấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)Plaintextcourtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
 │
 ├── Web Pages (Thành phần Front-end & Cấu hình deployment)
 │   ├── WEB-INF/

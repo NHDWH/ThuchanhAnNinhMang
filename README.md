@@ -128,7 +128,41 @@ Mở công cụ **MySQL Workbench**, thiết lập kết nối vào `Localhost` 
 * Chuột phải vào tên dự án → chọn `Properties` → chọn phân mục `Libraries`.
 * Đảm bảo tại tab `Compile`, hệ thống đã nhận diện được file Driver trung gian: máy đang dùng `jakarta.servlet.jsp.jstl-3.0.1.jar`, `jakarta.servlet.jsp.jstl-api-3.0.0.jar` và `mysql-connector-j-9.6.0.jar`.
 * Nếu chưa có, nhấn nút `Add JAR/Folder` để trỏ file thủ công.
-5. Khởi chạy và Kiểm thử chức năng toàn cụcA. Kích hoạt ServerNhập chuột phải vào tên dự án chọn Clean and Build để dọn dẹp bộ nhớ đệm và biên dịch lại mã nguồn sạch.Nhấn nút Run trên thanh công cụ.Hệ thống máy chủ Tomcat sẽ tự động compile các Servlet và mở trình duyệt mặc định truy cập thẳng vào địa chỉ trang chủ: http://localhost:808/web_04B. Hệ thống tài khoản mặc định có trong sqlMode: Chủ sânThuộc tínhGiá trịUsernameadmin@webcauda.comPassword123456Mode: KháchThuộc tínhGiá trịUsernamekhachhang@gmail.comPassword123456Sau khi chạy thành công, kiểm tra lần lượt các chức năng:Đăng ký tài khoản.Đăng nhập.Xem danh sách sân.Tìm kiếm sân.Xem chi tiết sân.Đặt sân.Thanh toán (mô phỏng).Xem lịch sử đặt sân.Đăng xuất.Đăng nhập Admin.Quản lý sân.Quản lý người dùng.Quản lý đơn đặt.Xem thống kê.6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự ánCấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)Plaintextcourtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
+## 5. Khởi chạy và Kiểm thử chức năng toàn cục
+
+### A. Kích hoạt Server
+* [cite_start]Nhấp chuột phải vào tên dự án chọn `Clean and Build` để dọn dẹp bộ nhớ đệm và biên dịch lại mã nguồn sạch[cite: 40].
+* [cite_start]Nhấn nút `Run` trên thanh công cụ[cite: 41].
+* [cite_start]Hệ thống máy chủ Tomcat sẽ tự động compile các Servlet và mở trình duyệt mặc định truy cập thẳng vào địa chỉ trang chủ: `http://localhost:808/web_04`[cite: 41].
+### B. Hệ thống tài khoản mặc định có trong sql
+
+**Mode: Chủ sân**
+| Thuộc tính | Giá trị |
+| :--- | :--- |
+| Username | admin@webcauda.com |
+| Password | 123456 |
+
+**Mode: Khách**
+| Thuộc tính | Giá trị |
+| :--- | :--- |
+| Username | khachhang@gmail.com |
+| Password | 123456 |
+Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
+* Đăng ký tài khoản.
+* Đăng nhập.
+* Xem danh sách sân.
+* Tìm kiếm sân.
+* Xem chi tiết sân.
+* Đặt sân.
+* Thanh toán (mô phỏng).
+* Xem lịch sử đặt sân.
+* Đăng xuất.
+* Đăng nhập Admin.
+* Quản lý sân.
+* Quản lý người dùng.
+* Quản lý đơn đặt.
+* Xem thống kê.
+* 6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự ánCấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)Plaintextcourtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
 │
 ├── Web Pages (Thành phần Front-end & Cấu hình deployment)
 │   ├── WEB-INF/

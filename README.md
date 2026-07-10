@@ -147,6 +147,7 @@ Mở công cụ **MySQL Workbench**, thiết lập kết nối vào `Localhost` 
 | :--- | :--- |
 | Username | khachhang@gmail.com |
 | Password | 123456 |
+
 Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
 * Đăng ký tài khoản.
 * Đăng nhập.

@@ -163,7 +163,11 @@ Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
 * Quản lý người dùng.
 * Quản lý đơn đặt.
 * Xem thống kê.
-* 6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự ánCấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)Plaintextcourtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
+## 6. Cấu trúc thư mục mã nguồn hoàn chỉnh của dự án
+Cấu trúc thư mục được tổ chức chuẩn hóa theo mô hình phân lớp MVC (Model-View-Controller)
+
+```text
+courtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
 │
 ├── Web Pages (Thành phần Front-end & Cấu hình deployment)
 │   ├── WEB-INF/
@@ -173,6 +177,7 @@ Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
 │   │   ├── dashboard.jsp    → Xem biểu đồ phân tích doanh thu và các thẻ chỉ số KPI
 │   │   ├── field.jsp        → Thiết lập danh mục sân đấu (CRUD) và bật/tắt bảo trì
 │   │   └── user.jsp         → Xem thông tin khách hàng, điểm tích lũy và khóa tài khoản
+│   │
 │   ├── booking.jsp          → Giao diện chọn ngày, chọn ca bận thời gian thực của khách
 │   ├── index.jsp            → Trang chủ hiển thị danh sách sân bãi và bộ lọc môn thể thao
 │   ├── login.jsp            → Form đăng nhập tài khoản thành viên hệ thống
@@ -208,4 +213,3 @@ Sau khi chạy thành công, kiểm tra lần lượt các chức năng:
     │
     └── utils/               → Kết nối MYSQL
         └── DBConnection.java → Kết nối trực tiếp DBase
-

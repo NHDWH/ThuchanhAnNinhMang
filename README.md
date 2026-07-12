@@ -221,5 +221,6 @@ courtsport/ (Thư mục gốc của dự án trên IDE NetBeans)
     └── utils/               → Kết nối MYSQL
         └── DBConnection.java → Kết nối trực tiếp DBase
 
-## 7. Video thuyết trình và demo 
-https://drive.google.com/file/d/1Pdl_apvmHJxQJrS-IBSJDIvketEn8Phj/view?usp=drive_link
+```
+## 7. Video thuyết trình và demo
+* **Link xem video trình bày dự án:** [Xem Video Demo Đồ Án Court Sport Tại Đây](https://drive.google.com/file/d/1Pdl_apvmHJxQJrS-IBSJDIvketEn8Phj/view?usp=drive_link)

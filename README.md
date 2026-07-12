@@ -29,10 +29,10 @@ Hệ thống đánh giá đóng góp công việc nội bộ đạt sự đồng
 Hiện nay, phần lớn các cơ sở kinh doanh sân thể thao vẫn áp dụng hình thức quản lý thủ công hoặc qua điện thoại, dẫn đến việc nhầm lẫn lịch, mất thời gian và khó tra cứu thông tin. Website **Court Sport** ra đời nhằm cung cấp nền tảng trực tuyến giúp người dùng dễ dàng tìm kiếm, đặt sân, thanh toán theo thời gian thực và hỗ trợ các đơn vị quản lý vận hành kinh doanh hiệu quả.
 
 ### Đối Tượng Sử Dụng Hệ Thống
-1. **Khách hàng:** 
-2. **Quản lý:** 
-3. **Chủ kinh doanh:** 
-4. **Quản trị viên (Admin):** 
+1. **Khách hàng** 
+2. **Quản lý** 
+3. **Chủ kinh doanh** 
+4. **Quản trị viên** 
 
 ## Các chức năng chính
 * **Chức năng 1 (Đăng ký, Đăng nhập & Phân quyền):** Xác thực người dùng, bảo mật mật khẩu băm và phân quyền truy cập (Admin/User).
